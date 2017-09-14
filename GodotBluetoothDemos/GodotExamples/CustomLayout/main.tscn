@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="main" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+
+[node name="connection" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 517.0
+margin/top = 280.0
+margin/right = 763.0
+margin/bottom = 320.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+text = "Connect"
+flat = false
+
+[node name="led_1" type="Button" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 217.0
+margin/top = 360.0
+margin/right = 340.0
+margin/bottom = 380.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Led 1"
+flat = false
+
+[node name="led_2" type="Button" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 517.0
+margin/top = 360.0
+margin/right = 640.0
+margin/bottom = 380.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Led 2"
+flat = false
+
+[node name="led_3" type="Button" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 817.0
+margin/top = 360.0
+margin/right = 940.0
+margin/bottom = 380.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Led 3"
+flat = false
+
+[node name="container" type="VBoxContainer" parent="."]
+
+rect/min_size = Vector2( 246, 40 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 517.0
+margin/top = 320.0
+margin/right = 763.0
+margin/bottom = 370.0
+alignment = 0
+
+
