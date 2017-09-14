@@ -113,6 +113,8 @@ ___
 
 For complete examples of usage for both *Native Layout* and *Custom Layout*, see the *GodotBluetoothDemos* folder. 
 
+![Godot Bluetooth](/_img_/layouts.png?raw=true "Native and Custom Layouts")
+
 **REMEMBER: You need to compile the module and add the binaries in the examples as per the instructions at the beginning of this file so that the examples work!**
 
 The circuit used in the demos is quite simple, and can be seen below:
