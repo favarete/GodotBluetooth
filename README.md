@@ -112,6 +112,9 @@ ___
 **Further Information And Demo Projects**
 
 For complete examples of usage for both *Native Layout* and *Custom Layout*, see the *GodotBluetoothDemos* folder. 
+
+**REMEMBER: You need to compile the module and add the binaries in the examples as per the instructions at the beginning of this file so that the examples work!**
+
 The circuit used in the demos is quite simple, and can be seen below:
 
 <p align="center">
