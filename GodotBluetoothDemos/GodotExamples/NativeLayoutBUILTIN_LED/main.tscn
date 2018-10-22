@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="main" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+
+[node name="connection" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 500.0
+margin/top = 87.0
+margin/right = 746.0
+margin/bottom = 127.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Connect"
+flat = false
+
+[node name="builtin_led" type="Button" parent="."]
+
+visibility/visible = false
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 503.0
+margin/top = 335.0
+margin/right = 626.0
+margin/bottom = 355.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Led"
+flat = false
+
+

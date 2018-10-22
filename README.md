@@ -2,7 +2,7 @@
 
 This module is a native Bluetooth implementation intended to perform fundamental tasks in a communication between Microcontrollers (especially Arduino) and Games/Applications, made with Godot Engine, running inside Android. At the moment this module doesn't support communication between two mobile devices, but such functionality can be added in the future.
 
-The module has been tested with [Godot-2.1.x-stable](https://github.com/godotengine/godot/releases) and *HC-05/06* Bluetooth module(hardware) on an *Arduino Uno R3*.
+The module has been tested with [Godot-2.1.x-stable](https://github.com/godotengine/godot/releases) and *HC-05/06* Bluetooth module(hardware) on an *Arduino Uno R3* and and *Elegoo Uno R3*.
 
 ## Available Features
 > Native Dialog Box Layout;
@@ -10,7 +10,7 @@ The module has been tested with [Godot-2.1.x-stable](https://github.com/godoteng
 > Easy Implementation Of Custom Layouts Inside Godot. 
 
 ## Build/Compile Module
-1. Copy the "GodotBluetooth" folder to the *modules* folder inside of Godot's source code;
+1. Copy the "GodotBluetooth" folder from this repository to the *modules* folder inside of Godot's source code;
 2. Compile the Android Export Templates. [[docs]](http://docs.godotengine.org/en/stable/reference/compiling_for_android.html)
 
 ## Configure GodotBluetooth
