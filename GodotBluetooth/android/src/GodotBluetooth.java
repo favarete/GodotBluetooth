@@ -12,6 +12,7 @@ import android.content.DialogInterface;
 import android.util.Log;
 import android.widget.Toast;
 import android.content.Intent;
+// import android.os.SystemClock;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -86,9 +87,10 @@ public class GodotBluetooth extends Godot.SingletonBase
                             if(msg.what == MESSAGE_READ){
                                 String newData = (String) msg.obj;
                                 receivedData.append(newData);
+                                // Log.i(TAG, receivedData.toString());
 
                                 int endElement = receivedData.indexOf("}");
-                                if(endElement > 0) {
+                                if(endElement >= 0) {
                                     String completeData = receivedData.substring(0, endElement);
                                     int dataSize = completeData.length();
 
@@ -340,19 +342,30 @@ public class GodotBluetooth extends Godot.SingletonBase
 
         public void run() {
 
-            byte[] buffer = new byte[1024];
-            int bytes;
+            // byte[] buffer = new byte[1024];
+            int bytes; // bytes returned from read()
+			int availableBytes = 0;
 
-            while (true) {
-                try {
-                    bytes = mmInStream.read(buffer);
-                    String externalData = new String(buffer, 0, bytes);
-                    localHandler.obtainMessage(MESSAGE_READ, bytes, -1, externalData).sendToTarget();
-                } 
+			while (true) {
+				try {
+					availableBytes = mmInStream.available();
+					if(availableBytes > 0){
+						byte[] buffer = new byte[availableBytes];  // buffer store for the stream
+						// Read from the InputStream
+						//Log.d(TAG, "read");
+						bytes = mmInStream.read(buffer);
 
-                catch (IOException e) {
-                    break;
-                }
+						if( bytes > 0 ){
+							// Send the obtained bytes to the UI activity
+							String externalData = new String(buffer, 0, bytes);
+							localHandler.obtainMessage(MESSAGE_READ, bytes, -1, externalData).sendToTarget();
+						}
+					}
+				} catch (IOException e) {
+					Log.e("Error reading", e.getMessage());
+					e.printStackTrace();
+					break;
+				}
             }
         }
 
